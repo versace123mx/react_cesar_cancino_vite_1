@@ -9,6 +9,7 @@ import RutasQueryString from './pages/RutasQueryString'
 import Hooks from './pages/Hooks'
 import HooksEventoClick from './pages/HooksEventoClick'
 import HookUseState from './pages/HookUseState'
+import HookEventoOnChange from './pages/HookEventoOnChange'
 
 function Rutas() {
     return (
@@ -23,6 +24,7 @@ function Rutas() {
                     <Route path="/hooks" element={<Hooks />} />
                     <Route path="/hooks/evento-clic" element={<HooksEventoClick />} />
                     <Route path="/hooks/useState" element={<HookUseState />} />
+                    <Route path="/hooks/evento-onChange" element={<HookEventoOnChange />} />
                     <Route path="*" element={<Error404 />} />
                 </Route>
             </Routes>

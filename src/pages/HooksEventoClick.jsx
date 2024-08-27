@@ -14,7 +14,7 @@ function HooksEventoClick() {
         <>
             <nav aria-label="breadcrumb">
                 <ol className="breadcrumb">
-                    <li className="breadcrumb-item"><Link to="/hooks">Home</Link></li>
+                    <li className="breadcrumb-item"><Link to="/hooks">Home - Hooks</Link></li>
                     <li className="breadcrumb-item active">Evento Click</li>
                 </ol>
             </nav>

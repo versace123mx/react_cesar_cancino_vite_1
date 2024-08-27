@@ -10,6 +10,9 @@ const Hooks = () => {
                 <li>
                     <Link to="/hooks/useState">Use State</Link>
                 </li>
+                <li>
+                    <Link to="/hooks/evento-onChange">Evento onChange</Link>
+                </li>
             </ul>
         </>
     )
