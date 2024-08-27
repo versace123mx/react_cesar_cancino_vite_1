@@ -23,9 +23,10 @@ function Header() {
 
                 <div className="nav-scroller py-1 mb-3 border-bottom">
                     <nav className="nav nav-underline justify-content-between">
-                        <Link className="nav-item nav-link link-body-emphasis active" to="/">Home</Link>
-                        <Link className="nav-item nav-link link-body-emphasis active" to="/rutas">Rutas</Link>
-                        <Link className="nav-item nav-link link-body-emphasis active" to="/formularios">Formularios</Link>
+                        <Link className="nav-item nav-link link-body-emphasis" to="/">Home</Link>
+                        <Link className="nav-item nav-link link-body-emphasis" to="/rutas">Rutas</Link>
+                        <Link className="nav-item nav-link link-body-emphasis" to="/formularios">Formularios</Link>
+                        <Link className="nav-item nav-link link-body-emphasis" to="/hooks">Hooks</Link>
                     </nav>
                 </div>
             </div>
