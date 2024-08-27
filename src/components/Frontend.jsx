@@ -7,8 +7,7 @@ function Frontend() {
         <>
             <Header />
             <main className="container">
-                <p>Hola</p>
-                <Outlet />
+                <Outlet />{/*aqui se pinta lo que biene de los componentes del componente Rutas*/}
             </main>
             <Footer />
         </>

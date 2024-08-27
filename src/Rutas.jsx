@@ -11,14 +11,15 @@ import Header from './components/Header'
 function Rutas() {
     return (
         <BrowserRouter>
-            <Frontend />
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/sobre-nosotros" element={<SobreNosotros />} />
-                <Route path="/rutas" element={<Urls />} />
-                <Route path="/rutas/path/:id?/:slug?" element={<RutasPath />} />
-                <Route path="/rutas/query-string" element={<RutasQueryString />} />
-                <Route path="*" element={<Error404 />} />
+                <Route path='/' element={<Frontend />}>{/*Este es el componente padre*/}
+                    <Route index element={<Home />} />
+                    <Route path="/sobre-nosotros" element={<SobreNosotros />} />
+                    <Route path="/rutas" element={<Urls />} />
+                    <Route path="/rutas/path/:id?/:slug?" element={<RutasPath />} />
+                    <Route path="/rutas/query-string" element={<RutasQueryString />} />
+                    <Route path="*" element={<Error404 />} />
+                </Route>
             </Routes>
         </BrowserRouter>
     )
