@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import { showAlert } from "../helper/helpers"
 
 function FormularioSimple() {
 
@@ -10,10 +11,16 @@ function FormularioSimple() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        if(nombre == '' || apellido == '' || edad == '' || educacion == ''){
+            showAlert('Error','Todos los campos deben de estar llenos','error')
+            return
+        }
         console.log(`Nombre: ${nombre}`)
         console.log(`Apellido: ${apellido}`)
         console.log(`Edad: ${edad}`)
         console.log(`Educacion: ${educacion}`)
+        showAlert('Good','Se mostraron correctamente','success')
+        
     }
     return (
         <>
