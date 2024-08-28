@@ -23,6 +23,7 @@ import HookCustom from './pages/HookCustom'
 import HookuseLoaderData, {loader as paisesLoader} from './pages/HookuseLoaderData'
 import HookuseNavigate from './pages/HookuseNavigate';
 import HookuseLocation from './pages/HookuseLocation';
+import HookuseRef from './pages/HookuseRef';
 const router = createBrowserRouter
 (
   [
@@ -44,6 +45,7 @@ const router = createBrowserRouter
         { path:"/hooks/useLoaderData", loader:paisesLoader, element:<HookuseLoaderData />},
         { path:"/hooks/useNavigate", element:<HookuseNavigate />},
         { path:"/hooks/useLocation", element:<HookuseLocation />},
+        { path:"/hooks/useRef", element:<HookuseRef />},
         { path:"*", element:<Error404 />},
       ]
     }

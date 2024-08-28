@@ -31,6 +31,9 @@ const Hooks = () => {
                 <li>
                     <Link to="/hooks/useLocation">useLocation</Link>
                 </li>
+                <li>
+                    <Link to="/hooks/useRef">useRef</Link>
+                </li>
             </ul>
         </>
     )
