@@ -21,6 +21,7 @@ import HooksEventosVarios from './pages/HooksEventosVarios'
 import HookUseEffect from './pages/HookUseEffect'
 import HookCustom from './pages/HookCustom'
 import HookuseLoaderData, {loader as paisesLoader} from './pages/HookuseLoaderData'
+import HookuseNavigate from './pages/HookuseNavigate';
 
 const router = createBrowserRouter
 (
@@ -41,6 +42,7 @@ const router = createBrowserRouter
         { path:"/hooks/useEffect", element:<HookUseEffect />},
         { path:"/hooks/custom-hook", element:<HookCustom />},
         { path:"/hooks/useLoaderData", loader:paisesLoader, element:<HookuseLoaderData />},
+        { path:"/hooks/useNavigate", loader:paisesLoader, element:<HookuseNavigate />},
         { path:"*", element:<Error404 />},
       ]
     }
