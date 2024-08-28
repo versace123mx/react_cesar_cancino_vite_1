@@ -3,8 +3,8 @@ import { Link } from "react-router-dom"
 function HooksEventoClick() {
 
     const handlePresioname = (e) =>{
-        console.log(e.target)
-        alert("Hola mundo")
+        //console.log(e.target)
+        alert("Hola Culoncita")
     }
 
     const handlePresionameConParametro = (nombre) => {

@@ -40,7 +40,7 @@ const router = createBrowserRouter
         { path:"/hooks/eventos-varios", element:<HooksEventosVarios />},
         { path:"/hooks/useEffect", element:<HookUseEffect />},
         { path:"/hooks/custom-hook", element:<HookCustom />},
-        { path:"/hooks/useLoaderData", element:<HookuseLoaderData />},
+        { path:"/hooks/useLoaderData", loader:paisesLoader, element:<HookuseLoaderData />},
         { path:"*", element:<Error404 />},
       ]
     }
