@@ -16,6 +16,9 @@ const Hooks = () => {
                 <li>
                     <Link to="/hooks/eventos-varios">Evento Varios</Link>
                 </li>
+                <li>
+                    <Link to="/hooks/useEffect">useEffect</Link>
+                </li>
             </ul>
         </>
     )

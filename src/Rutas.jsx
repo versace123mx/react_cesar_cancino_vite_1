@@ -11,6 +11,7 @@ import HooksEventoClick from './pages/HooksEventoClick'
 import HookUseState from './pages/HookUseState'
 import HookEventoOnChange from './pages/HookEventoOnChange'
 import HooksEventosVarios from './pages/HooksEventosVarios'
+import HookUseEffect from './pages/HookUseEffect'
 
 function Rutas() {
     return (
@@ -27,6 +28,7 @@ function Rutas() {
                     <Route path="/hooks/useState" element={<HookUseState />} />
                     <Route path="/hooks/evento-onChange" element={<HookEventoOnChange />} />
                     <Route path="/hooks/eventos-varios" element={<HooksEventosVarios />} />
+                    <Route path="/hooks/useEffect" element={<HookUseEffect />} />
                     <Route path="*" element={<Error404 />} />
                 </Route>
             </Routes>
