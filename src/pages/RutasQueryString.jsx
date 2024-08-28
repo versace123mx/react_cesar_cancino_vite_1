@@ -4,6 +4,7 @@ const RutasQueryString = () => {
     const { search } = useLocation()
     const id = new URLSearchParams(search).get('id')
     const slug = new URLSearchParams(search).get('slug')
+    console.log(search)
     return (
         <div>
             <h1>Rutas con query String</h1>
