@@ -10,7 +10,7 @@ const HookEventoOnChange = () => {
 
     return (
         <>
-        <nav aria-label="breadcrumb">
+            <nav aria-label="breadcrumb">
                 <ol className="breadcrumb">
                     <li className="breadcrumb-item"><Link to="/hooks">Home - Hooks</Link></li>
                     <li className="breadcrumb-item active">Evento onChange</li>
@@ -19,20 +19,20 @@ const HookEventoOnChange = () => {
             <hr />
             <h3>Evento onChange</h3>
             <div className="input-group mb-3">
-                <input type="text" placeholder="Ingresa tu nombre"  className="form-control" 
-                value={nombre}
-                onChange={(e) => {setNombre(e.target.value)}}
+                <input type="text" placeholder="Ingresa tu nombre" className="form-control"
+                    value={nombre}
+                    onChange={(e) => { setNombre(e.target.value) }}
                 />
             </div>
             <div className="my-3">
-                <button 
+                <button
                     className="btn btn-warning"
                     onClick={handleChangeInput}
                 >
-                        Enviar valor a consola
+                    Enviar valor a consola
                 </button>
             </div>
-            {nombre&& <p>Valor del State: {nombre}</p>}
+            {nombre && <p>Valor del State: {nombre}</p>}
         </>
     )
 }
