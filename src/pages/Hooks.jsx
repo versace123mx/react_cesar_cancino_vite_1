@@ -8,7 +8,7 @@ const Hooks = () => {
                     <Link to="/hooks/evento-clic">Evento Click</Link>
                 </li>
                 <li>
-                    <Link to="/hooks/useState">Use State</Link>
+                    <Link to="/hooks/useState">useState</Link>
                 </li>
                 <li>
                     <Link to="/hooks/evento-onChange">Evento onChange</Link>
@@ -21,6 +21,9 @@ const Hooks = () => {
                 </li>
                 <li>
                     <Link to="/hooks/custom-hook">Custom Hook</Link>
+                </li>
+                <li>
+                    <Link to="/hooks/useLoaderData">useLoaderData</Link>
                 </li>
             </ul>
         </>

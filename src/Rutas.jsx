@@ -13,6 +13,7 @@ import HookEventoOnChange from './pages/HookEventoOnChange'
 import HooksEventosVarios from './pages/HooksEventosVarios'
 import HookUseEffect from './pages/HookUseEffect'
 import HookCustom from './pages/HookCustom'
+import HookuseLoaderData, {loader as paisesLoader} from './pages/HookuseLoaderData'
 
 function Rutas() {
     return (
@@ -31,6 +32,7 @@ function Rutas() {
                     <Route path="/hooks/eventos-varios" element={<HooksEventosVarios />} />
                     <Route path="/hooks/useEffect" element={<HookUseEffect />} />
                     <Route path="/hooks/custom-hook" element={<HookCustom />} />
+                    <Route path="/hooks/useLoaderData" element={<HookuseLoaderData />} loader:paisesLoader/>
                     <Route path="*" element={<Error404 />} />
                 </Route>
             </Routes>

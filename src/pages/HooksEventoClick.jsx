@@ -13,10 +13,10 @@ function HooksEventoClick() {
     return (
         <>
             <nav aria-label="breadcrumb">
-                <ol className="breadcrumb">
+                <ul className="breadcrumb">
                     <li className="breadcrumb-item"><Link to="/hooks">Home - Hooks</Link></li>
                     <li className="breadcrumb-item active">Evento Click</li>
-                </ol>
+                </ul>
             </nav>
             <hr />
             <h3>Click</h3>

@@ -11,10 +11,10 @@ const HookEventoOnChange = () => {
     return (
         <>
             <nav aria-label="breadcrumb">
-                <ol className="breadcrumb">
+                <ul className="breadcrumb">
                     <li className="breadcrumb-item"><Link to="/hooks">Home - Hooks</Link></li>
                     <li className="breadcrumb-item active">Evento onChange</li>
-                </ol>
+                </ul>
             </nav>
             <hr />
             <h3>Evento onChange</h3>

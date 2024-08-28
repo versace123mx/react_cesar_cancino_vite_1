@@ -17,10 +17,10 @@ function HookCustom() {
     return (
         <>
             <nav aria-label="breadcrumb">
-                <ol className="breadcrumb">
+                <ul className="breadcrumb">
                     <li className="breadcrumb-item"><Link to="/hooks">Home - Hooks</Link></li>
                     <li className="breadcrumb-item active">Hook Custom</li>
-                </ol>
+                </ul>
             </nav>
             <hr />
             <h3>Hook Custom</h3>

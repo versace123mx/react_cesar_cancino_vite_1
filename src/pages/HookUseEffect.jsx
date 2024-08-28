@@ -26,10 +26,10 @@ const HookUseEffect = () => {
     return (
         <>
             <nav aria-label="breadcrumb">
-                <ol className="breadcrumb">
+                <ul className="breadcrumb">
                     <li className="breadcrumb-item"><Link to="/hooks">Home - Hooks</Link></li>
                     <li className="breadcrumb-item active">useEffect</li>
-                </ol>
+                </ul>
             </nav>
             <hr />
             <h3>useEffect</h3>

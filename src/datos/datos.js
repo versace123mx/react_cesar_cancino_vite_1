@@ -16,7 +16,20 @@ const productos = [
     {id:10,categoria_id:1,nombre:'Fresa',precio:100},
 ]
 
+const paises = [
+    {id:1,nombre:"Chile",dominio:'cl'},
+    {id:2,nombre:"Peru",dominio:'pe'},
+    {id:3,nombre:"Bolivia",dominio:'bo'},
+    {id:4,nombre:"Argentina",dominio:'ar'},
+    {id:5,nombre:"España",dominio:'es'},
+    {id:6,nombre:"USA",dominio:'us'},
+    {id:7,nombre:"Mexico",dominio:'mx'},
+    {id:8,nombre:"Colombia",dominio:'co'},
+    {id:9,nombre:"Venezuela",dominio:'ve'}
+]
+
 export {
     categorias,
-    productos
+    productos,
+    paises
 }
