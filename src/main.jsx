@@ -24,6 +24,8 @@ import HookuseLoaderData, {loader as paisesLoader} from './pages/HookuseLoaderDa
 import HookuseNavigate from './pages/HookuseNavigate';
 import HookuseLocation from './pages/HookuseLocation';
 import HookuseRef from './pages/HookuseRef';
+import Formularios from './pages/Formularios';
+import FormularioSimple from './pages/FormularioSimple';
 const router = createBrowserRouter
 (
   [
@@ -46,6 +48,8 @@ const router = createBrowserRouter
         { path:"/hooks/useNavigate", element:<HookuseNavigate />},
         { path:"/hooks/useLocation", element:<HookuseLocation />},
         { path:"/hooks/useRef", element:<HookuseRef />},
+        { path:"/formularios", element:<Formularios />},
+        { path:"/formularios/formulario-simple", element:<FormularioSimple />},
         { path:"*", element:<Error404 />},
       ]
     }
