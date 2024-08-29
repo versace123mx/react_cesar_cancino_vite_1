@@ -27,6 +27,7 @@ import HookuseRef from './pages/HookuseRef';
 import Formularios from './pages/Formularios';
 import FormularioSimple from './pages/FormularioSimple';
 import FormularioUseActionData, {action as procesarFormularioActionDate} from './pages/FormularioUseActionData';
+import FormulariosFormik from './pages/FormulariosFormik';
 
 
 const router = createBrowserRouter
@@ -54,6 +55,7 @@ const router = createBrowserRouter
         { path:"/formularios", element:<Formularios />},
         { path:"/formularios/formulario-simple", element:<FormularioSimple />},
         { path:"/formularios/useActionData", action:procesarFormularioActionDate, element:<FormularioUseActionData />},
+        { path:"/formularios/useFormik", element:<FormulariosFormik />},
         { path:"*", element:<Error404 />},
       ]
     }

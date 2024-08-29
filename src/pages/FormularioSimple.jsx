@@ -30,7 +30,7 @@ function FormularioSimple() {
             <nav aria-label="breadcrumb">
                 <ul className="breadcrumb">
                     <li className="breadcrumb-item"><Link to="/formularios">Home - Formularios</Link></li>
-                    <li className="breadcrumb-item active">Formulario Simple</li>
+                    <li className="breadcrumb-item active">Formulario Simple - una forma de validar campos pero no me gusto, hace reload en cada cambio que hago</li>
                 </ul>
             </nav>
             <hr />
