@@ -3,7 +3,7 @@ import { useRef, useState } from "react"
 
 function HookuseRef() {
     const [texto, setTexto] = useState('')
-    const inputRef = useRef()//extrae lo que tiene el input y lo asigna ainputRef
+    const inputRef = useRef()//extrae lo que tiene el input y lo asigna a inputRef "atributo ref en el input"
     const cambiaColor = useRef();//aqui traemos el boton
     const imprimirValor = () => {
         setTexto(inputRef.current.value)//asignamos el valor del input sin utilizar un onChange

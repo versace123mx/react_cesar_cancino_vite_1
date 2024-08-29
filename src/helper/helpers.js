@@ -21,7 +21,7 @@ const acortarTexto = (valor,desde, hasta) => {
 const showAlert = (titulo,mensaje,icono) => {
     Swal.fire({
         title: titulo,
-        text: mensaje,
+        html: mensaje,
         icon: icono
     })
 }

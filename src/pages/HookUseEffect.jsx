@@ -16,7 +16,8 @@ const HookUseEffect = () => {
         )
     }, [marcador])
     /*El use Effect se eejecuta de manera global siempre y cuando no se le pasen valores al [] final, si se le pasa algun valor, este estara condicionado al valor que se le pase como en el
-        ejemplo que estamos manejando, aqui en nuestro ejemplo esperamos a que cambie el valor de marcador
+        ejemplo que estamos manejando, aqui en nuestro ejemplo esperamos a que cambie el valor de marcador.
+    Nota: siempre se ejecuta una primera vez el useEffect, pero si queremos volverlo a llamar sera en este caso bajo la condicion de marcador activo o desactivo
     */
 
     const mostrarArreglo = (valor) => {

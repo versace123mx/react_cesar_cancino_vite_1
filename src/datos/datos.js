@@ -28,8 +28,24 @@ const paises = [
     {id:9,nombre:"Venezuela",dominio:'ve'}
 ]
 
+const categoria_productos = [
+    {id:1, nombre:'Abarrotes'},
+    {id:2, nombre:'Lacteos'},
+    {id:3, nombre:'Carnes'},
+    {id:4, nombre:'Licores'},
+    {id:5, nombre:'Perfumes'}
+]
+const atributos = [
+    {id:1, nombre:'Perecible'},
+    {id:2, nombre:'Armable'},
+    {id:3, nombre:'Fragil'},
+    {id:4, nombre:'Multiuso'},
+    {id:5, nombre:'Edicion Limitada'}
+]
 export {
     categorias,
     productos,
-    paises
+    paises,
+    categoria_productos,
+    atributos
 }

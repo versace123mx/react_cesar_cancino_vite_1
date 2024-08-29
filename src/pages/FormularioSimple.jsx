@@ -2,6 +2,9 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import { showAlert } from "../helper/helpers"
 
+/*
+    En este tipo de formulario no es necesario el method ni el post en la etiqueta form
+*/
 function FormularioSimple() {
 
     const [nombre, setNombre] = useState('')

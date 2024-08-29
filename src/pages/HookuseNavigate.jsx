@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom"
 
+//Sirve para navegar entre paginas
 function HookuseNavigate() {
     const navigate = useNavigate()
 

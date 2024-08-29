@@ -1,6 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom"
 import { paises } from "../datos/datos"
 
+//Carga desde que se renderiza
 export function loader() {
     const countrys = paises.sort().reverse()
     return countrys
