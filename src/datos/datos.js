@@ -42,10 +42,42 @@ const atributos = [
     {id:4, nombre:'Multiuso'},
     {id:5, nombre:'Edicion Limitada'}
 ]
+const imagenes = [{
+    id: 1,
+    titulo: "Curso Django",
+    nombre: 'https://automationpanda.com/wp-content/uploads/2017/09/django-logo-negative.png?w=620'
+},
+{
+    id: 2,
+    titulo: "Curso Laravel",
+    nombre: 'https://proximahost.es/blog/wp-content/uploads/2022/05/Laravel.jpg'
+},
+{
+    id: 3,
+    titulo: "Curso SprinBoot",
+    nombre: 'https://www.qindel.com/wp-content/uploads/2023/04/spring-boot.jpeg'
+},
+{
+    id: 4,
+    titulo: "Curso FastAPI",
+    nombre: 'https://www.simplilearn.com/ice9/free_resources_article_thumb/FastAPI_b.jpg'
+},
+{
+    id: 5,
+    titulo: "Curso Node",
+    nombre: 'https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fs15ubgod56c7butyt7eu.jpg'
+},
+{
+    id: 6,
+    titulo:"Curso Angular",
+    nombre: 'https://www.hiberus.com/crecemos-contigo/wp-content/uploads/2021/10/angular-todo-lo-que-necesitas-saber.png'
+}
+];
 export {
     categorias,
     productos,
     paises,
     categoria_productos,
-    atributos
+    atributos,
+    imagenes
 }

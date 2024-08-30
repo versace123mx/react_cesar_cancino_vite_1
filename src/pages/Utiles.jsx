@@ -32,6 +32,9 @@ const Utiles = () => {
                 <li>
                     <Link to="/utiles/modalBootstrap">Modal Bootstrap</Link>
                 </li>
+                <li>
+                    <Link to="/utiles/carrusel">Carrusel</Link>
+                </li>
             </ul>
         </>
     )

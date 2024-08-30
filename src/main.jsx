@@ -40,6 +40,7 @@ import UtilesGraficosjs from './pages/UtilesGraficosjs';
 import UtilesMapasjs from './pages/UtilesMapasjs';
 import UtilesMapasjs2 from './pages/UtilesMapasjs2';
 import UtilesModalBootstrap from './pages/UtilesModalBootstrap';
+import UtilesCarrusel from './pages/UtilesCarrusel';
 
 
 const router = createBrowserRouter
@@ -80,6 +81,7 @@ const router = createBrowserRouter
         { path:"/utiles/mapas", element:<UtilesMapasjs />},
         { path:"/utiles/mapas2", element:<UtilesMapasjs2 />},
         { path:"/utiles/modalBootstrap", element:<UtilesModalBootstrap />},
+        { path:"/utiles/carrusel", element:<UtilesCarrusel />},
         { path:"*", element:<Error404 />},
       ]
     }
