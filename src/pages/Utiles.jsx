@@ -17,7 +17,10 @@ const Utiles = () => {
                 <li>
                     <Link to="/utiles/swipeable">Swipeable</Link>
                 </li>
-            </ul> 
+                <li>
+                    <Link to="/utiles/reactwebcam">ReactWebCam</Link>
+                </li>
+            </ul>
         </>
     )
 }

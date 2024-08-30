@@ -35,6 +35,7 @@ import UtilesDaysjs from './pages/UtilesDaysjs';
 import UtilesMomentjs from './pages/UtilesMomentjs';
 import UtilesSpinerjs from './pages/UtilesSpinerjs';
 import UtilesSwipeablejs from './pages/UtilesSwipeablejs';
+import UtilesWebCamjs from './pages/UtilesWebCamjs';
 
 
 const router = createBrowserRouter
@@ -70,6 +71,7 @@ const router = createBrowserRouter
         { path:"/utiles/momentjs", element:<UtilesMomentjs />},
         { path:"/utiles/spinner", element:<UtilesSpinerjs />},
         { path:"/utiles/swipeable", element:<UtilesSwipeablejs />},
+        { path:"/utiles/reactwebcam", element:<UtilesWebCamjs />},
         { path:"*", element:<Error404 />},
       ]
     }
