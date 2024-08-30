@@ -31,6 +31,7 @@ import FormulariosFormik from './pages/FormulariosFormik';
 import FormualriosReactHookForm from './pages/FormualriosReactHookForm';
 import FormulariosReactFinalForm from './pages/FormulariosReactFinalForm';
 import Utiles from './pages/Utiles';
+import UtilesDaysjs from './pages/UtilesDaysjs';
 
 
 const router = createBrowserRouter
@@ -62,6 +63,7 @@ const router = createBrowserRouter
         { path:"/formularios/reactHookForm", element:<FormualriosReactHookForm />},
         { path:"/formularios/ReactFinalForm", element:<FormulariosReactFinalForm />},
         { path:"/utiles", element:<Utiles />},
+        { path:"/utiles/daysjs", element:<UtilesDaysjs />},
         { path:"*", element:<Error404 />},
       ]
     }
