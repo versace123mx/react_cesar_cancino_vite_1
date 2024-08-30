@@ -14,6 +14,9 @@ const Utiles = () => {
                 <li>
                     <Link to="/utiles/spinner">Spinner</Link>
                 </li>
+                <li>
+                    <Link to="/utiles/swipeable">Swipeable</Link>
+                </li>
             </ul> 
         </>
     )
