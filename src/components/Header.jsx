@@ -27,6 +27,7 @@ function Header() {
                         <Link className="nav-item nav-link link-body-emphasis" to="/rutas">Rutas</Link>
                         <Link className="nav-item nav-link link-body-emphasis" to="/hooks">Hooks</Link>
                         <Link className="nav-item nav-link link-body-emphasis" to="/formularios">Formularios</Link>
+                        <Link className="nav-item nav-link link-body-emphasis" to="/utiles">Utiles</Link>
                     </nav>
                 </div>
             </div>
