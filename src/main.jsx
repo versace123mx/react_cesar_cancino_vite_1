@@ -32,6 +32,7 @@ import FormualriosReactHookForm from './pages/FormualriosReactHookForm';
 import FormulariosReactFinalForm from './pages/FormulariosReactFinalForm';
 import Utiles from './pages/Utiles';
 import UtilesDaysjs from './pages/UtilesDaysjs';
+import UtilesMomentjs from './pages/UtilesMomentjs';
 
 
 const router = createBrowserRouter
@@ -64,6 +65,7 @@ const router = createBrowserRouter
         { path:"/formularios/ReactFinalForm", element:<FormulariosReactFinalForm />},
         { path:"/utiles", element:<Utiles />},
         { path:"/utiles/daysjs", element:<UtilesDaysjs />},
+        { path:"/utiles/momentjs", element:<UtilesMomentjs />},
         { path:"*", element:<Error404 />},
       ]
     }
