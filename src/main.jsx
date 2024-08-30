@@ -37,6 +37,8 @@ import UtilesSpinerjs from './pages/UtilesSpinerjs';
 import UtilesSwipeablejs from './pages/UtilesSwipeablejs';
 import UtilesWebCamjs from './pages/UtilesWebCamjs';
 import UtilesGraficosjs from './pages/UtilesGraficosjs';
+import UtilesMapasjs from './pages/UtilesMapasjs';
+import UtilesMapasjs2 from './pages/UtilesMapasjs2';
 
 
 const router = createBrowserRouter
@@ -74,6 +76,8 @@ const router = createBrowserRouter
         { path:"/utiles/swipeable", element:<UtilesSwipeablejs />},
         { path:"/utiles/reactwebcam", element:<UtilesWebCamjs />},
         { path:"/utiles/graficaspiechart", element:<UtilesGraficosjs />},
+        { path:"/utiles/mapas", element:<UtilesMapasjs />},
+        { path:"/utiles/mapas2", element:<UtilesMapasjs2 />},
         { path:"*", element:<Error404 />},
       ]
     }

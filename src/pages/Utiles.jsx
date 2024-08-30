@@ -23,6 +23,12 @@ const Utiles = () => {
                 <li>
                     <Link to="/utiles/graficaspiechart">Graficas con Pie Chart</Link>
                 </li>
+                <li>
+                    <Link to="/utiles/mapas">Mapas</Link>
+                </li>
+                <li>
+                    <Link to="/utiles/mapas2">MapBox</Link>
+                </li>
             </ul>
         </>
     )
