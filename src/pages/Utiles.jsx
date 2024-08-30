@@ -11,6 +11,9 @@ const Utiles = () => {
                 <li>
                     <Link to="/utiles/momentjs">MomentJS</Link>
                 </li>
+                <li>
+                    <Link to="/utiles/spinner">Spinner</Link>
+                </li>
             </ul> 
         </>
     )
