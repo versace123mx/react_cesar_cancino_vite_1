@@ -29,6 +29,9 @@ const Utiles = () => {
                 <li>
                     <Link to="/utiles/mapas2">MapBox</Link>
                 </li>
+                <li>
+                    <Link to="/utiles/modalBootstrap">Modal Bootstrap</Link>
+                </li>
             </ul>
         </>
     )
