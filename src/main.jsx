@@ -44,6 +44,7 @@ import UtilesCarrusel from './pages/UtilesCarrusel';
 import Material from './pages/Material';
 import MaterialBotones from './pages/MaterialBotones';
 import MaterialList from './pages/MaterialList';
+import MaterialMenuDrawer from './pages/MaterialMenuDrawer';
 
 
 const router = createBrowserRouter
@@ -88,6 +89,7 @@ const router = createBrowserRouter
         { path:"/material", element:<Material />},
         { path:"/material/materialbotones", element:<MaterialBotones />},
         { path:"/material/materiallist", element:<MaterialList />},
+        { path:"/material/materialmenudrawer", element:<MaterialMenuDrawer />},
         { path:"*", element:<Error404 />},
       ]
     }
