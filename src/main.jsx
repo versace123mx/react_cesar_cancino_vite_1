@@ -52,6 +52,7 @@ import MaterialTabs from './pages/MaterialTabs';
 import MaterialDialog from './pages/MaterialDialog';
 import MaterialCard from './pages/MaterialCard';
 import MaterialAutocomplit from './pages/MaterialAutocomplit';
+import MaterialDatePicker from './pages/MaterialDatePicker';
 
 
 const router = createBrowserRouter
@@ -104,6 +105,7 @@ const router = createBrowserRouter
         { path:"/material/materialdialog", element:<MaterialDialog />},
         { path:"/material/materialcard", element:<MaterialCard />},
         { path:"/material/materialautocomplete", element:<MaterialAutocomplit />},
+        { path:"/material/materialdatepicker", element:<MaterialDatePicker />},
         { path:"*", element:<Error404 />},
       ]
     }
