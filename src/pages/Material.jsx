@@ -26,6 +26,9 @@ const Material = () => {
                 <li>
                     <Link to="/material/materialtaps">Material Taps</Link>
                 </li>
+                <li>
+                    <Link to="/material/materialdialog">Material Dialog</Link>
+                </li>
             </ul>
         </>
     )

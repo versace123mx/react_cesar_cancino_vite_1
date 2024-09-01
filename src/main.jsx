@@ -49,6 +49,7 @@ import MaterialTable from './pages/MaterialTable';
 import MaterialAcordeon from './pages/MaterialAcordeon';
 import MaterialStepper from './pages/MaterialStepper';
 import MaterialTabs from './pages/MaterialTabs';
+import MaterialDialog from './pages/MaterialDialog';
 
 
 const router = createBrowserRouter
@@ -98,6 +99,7 @@ const router = createBrowserRouter
         { path:"/material/materialacordeon", element:<MaterialAcordeon />},
         { path:"/material/materialstepper", element:<MaterialStepper />},
         { path:"/material/materialtaps", element:<MaterialTabs />},
+        { path:"/material/materialdialog", element:<MaterialDialog />},
         { path:"*", element:<Error404 />},
       ]
     }
