@@ -43,6 +43,7 @@ import UtilesModalBootstrap from './pages/UtilesModalBootstrap';
 import UtilesCarrusel from './pages/UtilesCarrusel';
 import Material from './pages/Material';
 import MaterialBotones from './pages/MaterialBotones';
+import MaterialList from './pages/MaterialList';
 
 
 const router = createBrowserRouter
@@ -86,6 +87,7 @@ const router = createBrowserRouter
         { path:"/utiles/carrusel", element:<UtilesCarrusel />},
         { path:"/material", element:<Material />},
         { path:"/material/materialbotones", element:<MaterialBotones />},
+        { path:"/material/materiallist", element:<MaterialList />},
         { path:"*", element:<Error404 />},
       ]
     }

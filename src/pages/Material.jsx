@@ -8,6 +8,9 @@ const Material = () => {
                 <li>
                     <Link to="/material/materialbotones">Material Botones</Link>
                 </li>
+                <li>
+                    <Link to="/material/materiallist">Material List</Link>
+                </li>
             </ul>
         </>
     )
