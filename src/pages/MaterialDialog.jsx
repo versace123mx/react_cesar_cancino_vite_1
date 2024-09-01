@@ -18,50 +18,50 @@ function MaterialDialog() {
 
   const [open, setOpen] = useState(false);
 
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
 
-    const handleClose = () => {
-        setOpen(false);
-    };
-    const handleAbrir = () => {
-        alert("cualquier cosa");
-    };
+  const handleClose = () => {
+    setOpen(false);
+  };
+  const handleAbrir = () => {
+    alert("cualquier cosa");
+  };
   return (
     <>
-    <nav aria-label="breadcrumb">
-                <ul className="breadcrumb">
-                    <li className="breadcrumb-item"><Link to="/material">Home - Material</Link></li>
-                    <li className="breadcrumb-item active">Material Dialog</li>
-                </ul>
-            </nav>
-            <hr />
-            <h3>Material Dialog</h3>
-            
-            <Button variant="outlined" onClick={handleClickOpen}>
-              Abrir confirmar
-          </Button>
-          <Dialog
-              open={open}
-              TransitionComponent={Transition}
-              keepMounted
-              onClose={handleClose}
-              aria-describedby="alert-dialog-slide-description"
-          >
-              <DialogTitle>{"¿Alguna pregunta?"}</DialogTitle>
-              <DialogContent>
-                  <DialogContentText id="alert-dialog-slide-description">
-                      Acá puedes poner cualquier texto con contenido html <strong>negritas</strong>.
-                      <br/>
-                      <img src="/images/logo.png" alt="" />
-                  </DialogContentText>
-              </DialogContent>
-              <DialogActions>
-                  <Button onClick={handleClose}>Cancelar</Button>
-                  <Button onClick={handleAbrir}>Agregar</Button>
-              </DialogActions>
-          </Dialog>
+      <nav aria-label="breadcrumb">
+        <ul className="breadcrumb">
+          <li className="breadcrumb-item"><Link to="/material">Home - Material</Link></li>
+          <li className="breadcrumb-item active">Material Dialog</li>
+        </ul>
+      </nav>
+      <hr />
+      <h3>Material Dialog</h3>
+
+      <Button variant="outlined" onClick={handleClickOpen}>
+        Abrir confirmar
+      </Button>
+      <Dialog
+        open={open}
+        TransitionComponent={Transition}
+        keepMounted
+        onClose={handleClose}
+        aria-describedby="alert-dialog-slide-description"
+      >
+        <DialogTitle>{"¿Alguna pregunta?"}</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-slide-description">
+            Acá puedes poner cualquier texto con contenido html <strong>negritas</strong>.
+            <br />
+            <img src="/images/logo.png" alt="" />
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose}>Cancelar</Button>
+          <Button onClick={handleAbrir}>Agregar</Button>
+        </DialogActions>
+      </Dialog>
     </>
   )
 }
