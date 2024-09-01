@@ -28,6 +28,7 @@ function Header() {
                         <Link className="nav-item nav-link link-body-emphasis" to="/hooks">Hooks</Link>
                         <Link className="nav-item nav-link link-body-emphasis" to="/formularios">Formularios</Link>
                         <Link className="nav-item nav-link link-body-emphasis" to="/utiles">Utiles</Link>
+                        <Link className="nav-item nav-link link-body-emphasis" to="/material">Material</Link>
                     </nav>
                 </div>
             </div>
