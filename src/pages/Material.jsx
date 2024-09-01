@@ -14,6 +14,9 @@ const Material = () => {
                 <li>
                     <Link to="/material/materialmenudrawer">Material Menu Drawer</Link>
                 </li>
+                <li>
+                    <Link to="/material/materialtable">Material Table</Link>
+                </li>
             </ul>
         </>
     )
