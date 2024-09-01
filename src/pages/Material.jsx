@@ -20,6 +20,9 @@ const Material = () => {
                 <li>
                     <Link to="/material/materialacordeon">Material Acordeon</Link>
                 </li>
+                <li>
+                    <Link to="/material/materialstepper">Material Stepper</Link>
+                </li>
             </ul>
         </>
     )
