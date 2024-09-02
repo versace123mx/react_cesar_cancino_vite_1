@@ -7,6 +7,9 @@ function AlmacenamientoLocal() {
                 <li>
                     <Link to="/almacenamientoLocal/LocalStorage">LocaStorage</Link>
                 </li>
+                <li>
+                    <Link to="/almacenamientoLocal/sessionStorage">sessionStorage</Link>
+                </li>
             </ul>
         </>
     )

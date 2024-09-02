@@ -54,6 +54,8 @@ import MaterialCard from './pages/MaterialCard';
 import MaterialAutocomplit from './pages/MaterialAutocomplit';
 import MaterialDatePicker from './pages/MaterialDatePicker';
 import AlmacenamientoLocal from './pages/AlmacenamientoLocal';
+import AlmacenamientoLocalLocalStorage from './pages/AlmacenamientoLocalLocalStorage';
+import AlmacenamientoLocalSessionStorage from './pages/AlmacenamientoLocalSessionStorage';
 
 
 const router = createBrowserRouter
@@ -108,6 +110,8 @@ const router = createBrowserRouter
         { path:"/material/materialautocomplete", element:<MaterialAutocomplit />},
         { path:"/material/materialdatepicker", element:<MaterialDatePicker />},
         { path:"/almacenamientoLocal", element:<AlmacenamientoLocal />},
+        { path:"/almacenamientoLocal/LocalStorage", element:<AlmacenamientoLocalLocalStorage />},
+        { path:"/almacenamientoLocal/sessionStorage", element:<AlmacenamientoLocalSessionStorage />},
         { path:"*", element:<Error404 />},
       ]
     }
