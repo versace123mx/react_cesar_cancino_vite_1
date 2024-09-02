@@ -60,43 +60,43 @@ function MaterialBotones() {
             </div>
 
             <div className="my-3">
-            <Stack direction="row" alignItems="center" spacing={2}>
-              <Button variant="contained" component="label">
-                  Upload
-                  <input hidden accept="image/*" multiple type="file" />
-              </Button>
-              <IconButton color="primary" aria-label="upload picture" component="label"><i className="fas fa-camera-retro"></i>
-                  <input hidden accept="image/*" type="file" />
-                  
-              </IconButton>
-          </Stack>
-          </div>
-          <div className="my-3">
-          <Stack direction="row" spacing={2}>
-              <Button variant="outlined" startIcon={<DeleteIcon />}>
-                  Delete
-              </Button>
-              <Button variant="contained" endIcon={<SendIcon />}>
-                  Send
-              </Button>
-          </Stack>
-          </div>
-          <div className="my-3">
-          <Stack direction="row" spacing={1}>
-              <IconButton aria-label="delete">
-                  <DeleteIcon />
-              </IconButton>
-              <IconButton aria-label="delete" disabled color="primary">
-                  <DeleteIcon />
-              </IconButton>
-              <IconButton color="secondary" aria-label="add an alarm">
-                  <AlarmIcon />
-              </IconButton>
-              <IconButton color="primary" aria-label="add to shopping cart">
-                  <AddShoppingCartIcon />
-              </IconButton>
-          </Stack>
-          </div>
+                <Stack direction="row" alignItems="center" spacing={2}>
+                    <Button variant="contained" component="label">
+                        Upload
+                        <input hidden accept="image/*" multiple type="file" />
+                    </Button>
+                    <IconButton color="primary" aria-label="upload picture" component="label"><i className="fas fa-camera-retro"></i>
+                        <input hidden accept="image/*" type="file" />
+
+                    </IconButton>
+                </Stack>
+            </div>
+            <div className="my-3">
+                <Stack direction="row" spacing={2}>
+                    <Button variant="outlined" startIcon={<DeleteIcon />}>
+                        Delete
+                    </Button>
+                    <Button variant="contained" endIcon={<SendIcon />}>
+                        Send
+                    </Button>
+                </Stack>
+            </div>
+            <div className="my-3">
+                <Stack direction="row" spacing={1}>
+                    <IconButton aria-label="delete">
+                        <DeleteIcon />
+                    </IconButton>
+                    <IconButton aria-label="delete" disabled color="primary">
+                        <DeleteIcon />
+                    </IconButton>
+                    <IconButton color="secondary" aria-label="add an alarm">
+                        <AlarmIcon />
+                    </IconButton>
+                    <IconButton color="primary" aria-label="add to shopping cart">
+                        <AddShoppingCartIcon />
+                    </IconButton>
+                </Stack>
+            </div>
         </>
     )
 }
