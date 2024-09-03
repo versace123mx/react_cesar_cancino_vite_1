@@ -1,4 +1,4 @@
-import { createContext } from 'react'
+import { createContext, useState } from 'react'
 const EjemploContext = createContext()
 
 const EjemploProvider = ({children}) => {
@@ -6,10 +6,13 @@ const EjemploProvider = ({children}) => {
     const saludar = (nombre) =>{
         return nombre
     }
+    const [stateContext,setStateContext] = useState("Contenido Inicial al state Context")
     return (
         <EjemploContext.Provider value={{
             variableContexto,
-            saludar
+            saludar,
+            stateContext,
+            setStateContext
         }}>
             {children}
         </EjemploContext.Provider>
