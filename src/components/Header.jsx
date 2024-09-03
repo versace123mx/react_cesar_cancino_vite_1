@@ -30,6 +30,7 @@ function Header() {
                         <Link className="nav-item nav-link link-body-emphasis" to="/utiles">Utiles</Link>
                         <Link className="nav-item nav-link link-body-emphasis" to="/material">Material</Link>
                         <Link className="nav-item nav-link link-body-emphasis" to="/almacenamientoLocal">Local Storage</Link>
+                        <Link className="nav-item nav-link link-body-emphasis" to="/conetext">Context</Link>
                     </nav>
                 </div>
             </div>

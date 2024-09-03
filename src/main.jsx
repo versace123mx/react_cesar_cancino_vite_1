@@ -56,6 +56,7 @@ import MaterialDatePicker from './pages/MaterialDatePicker';
 import AlmacenamientoLocal from './pages/AlmacenamientoLocal';
 import AlmacenamientoLocalLocalStorage from './pages/AlmacenamientoLocalLocalStorage';
 import AlmacenamientoLocalSessionStorage from './pages/AlmacenamientoLocalSessionStorage';
+import ContextEjemplo from './pages/ContextEjemplo';
 
 
 const router = createBrowserRouter
@@ -112,6 +113,7 @@ const router = createBrowserRouter
         { path:"/almacenamientoLocal", element:<AlmacenamientoLocal />},
         { path:"/almacenamientoLocal/LocalStorage", element:<AlmacenamientoLocalLocalStorage />},
         { path:"/almacenamientoLocal/sessionStorage", element:<AlmacenamientoLocalSessionStorage />},
+        { path:"/conetext", element:<ContextEjemplo />},
         { path:"*", element:<Error404 />},
       ]
     }
