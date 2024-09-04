@@ -62,6 +62,7 @@ import AlmacenamientoLocalSessionStorage from './pages/AlmacenamientoLocalSessio
 import ContextEjemplo from './pages/ContextEjemplo';
 import ReduxEjemplo from './pages/ReduxEjemplo';
 import AxiosComponent from './pages/AxiosComponent';
+import AxiosCategorias,{loader as listarCategorias} from './pages/AxiosCategorias';
 
 
 const router = createBrowserRouter
@@ -121,6 +122,7 @@ const router = createBrowserRouter
         { path:"/conetext", element:<ContextEjemplo />},
         { path:"/redux", element:<ReduxEjemplo />},
         { path:"/axios", element:<AxiosComponent />},
+        { path:"/axios/categorias", loader:listarCategorias, element:<AxiosCategorias />},
         { path:"*", element:<Error404 />},
       ]
     }
