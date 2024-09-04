@@ -61,6 +61,7 @@ import AlmacenamientoLocalLocalStorage from './pages/AlmacenamientoLocalLocalSto
 import AlmacenamientoLocalSessionStorage from './pages/AlmacenamientoLocalSessionStorage';
 import ContextEjemplo from './pages/ContextEjemplo';
 import ReduxEjemplo from './pages/ReduxEjemplo';
+import AxiosComponent from './pages/AxiosComponent';
 
 
 const router = createBrowserRouter
@@ -119,6 +120,7 @@ const router = createBrowserRouter
         { path:"/almacenamientoLocal/sessionStorage", element:<AlmacenamientoLocalSessionStorage />},
         { path:"/conetext", element:<ContextEjemplo />},
         { path:"/redux", element:<ReduxEjemplo />},
+        { path:"/axios", element:<AxiosComponent />},
         { path:"*", element:<Error404 />},
       ]
     }
