@@ -23,6 +23,18 @@ const getCategorias = async () =>{
         return datos
 }
 
+const addCategorias = async (request) =>{
+    const datos = axios.post(`${import.meta.env.VITE_API_URL}categorias`,request,{headers:cabeceros})
+                .then((response) => {
+                    return response.status
+                })
+                .catch((err) => {
+                    console.log("Fallo la comunicacion")
+                })
+        return datos
+}
+
 export {
-    getCategorias
+    getCategorias,
+    addCategorias
 }
