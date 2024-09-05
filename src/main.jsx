@@ -64,6 +64,7 @@ import ReduxEjemplo from './pages/ReduxEjemplo';
 import AxiosComponent from './pages/AxiosComponent';
 import AxiosCategorias,{loader as listarCategorias} from './pages/AxiosCategorias';
 import AxiosCategoriasAdd, {action as addCategorias} from './pages/AxiosCategoriasAdd';
+import AxiosCategoriasEdit,{loader as editCategoriasLoader, action as editCategorias} from './pages/AxiosCategoriasEdit';
 
 
 const router = createBrowserRouter
@@ -125,6 +126,7 @@ const router = createBrowserRouter
         { path:"/axios", element:<AxiosComponent />},
         { path:"/axios/categorias", loader:listarCategorias, element:<AxiosCategorias />},
         { path:"/axios/categorias/add", action:addCategorias, element:<AxiosCategoriasAdd />},
+        { path:"/axios/categorias/editar/:id", loader:editCategoriasLoader,action:editCategorias, element:<AxiosCategoriasEdit />},
         { path:"*", element:<Error404 />},
       ]
     }

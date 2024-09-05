@@ -34,7 +34,34 @@ const addCategorias = async (request) =>{
         return datos
 }
 
+const getCategoriasPorId = async (id) =>{
+    const datos = axios.get(`${import.meta.env.VITE_API_URL}categorias/${id}`,{headers:cabeceros})
+                .then((response) => {
+                    if(response.status == 200){
+                        return response.data
+                    }else{
+                        console.log("Fallo la comunicacion en el then")
+                    }
+                })
+                .catch((err) => {
+                    console.log("Fallo la comunicacion")
+                })
+        return datos
+}
+
+const editCategoriasPorId = async (request,id) =>{
+    const datos = axios.put(`${import.meta.env.VITE_API_URL}categorias/${id}`,request,{headers:cabeceros})
+                .then((response) => {
+                    return response.status
+                })
+                .catch((err) => {
+                    console.log("Fallo la comunicacion")
+                })
+        return datos
+}
 export {
     getCategorias,
-    addCategorias
+    addCategorias,
+    getCategoriasPorId,
+    editCategoriasPorId
 }

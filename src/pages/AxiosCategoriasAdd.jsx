@@ -7,7 +7,7 @@ export async function action({ request }) {
     const formData = await request.formData()
     const datos = Object.fromEntries(formData)
     let errores = []
-    if(Object.values(datos).includes('')){
+    if (Object.values(datos).includes('')) {
         errores.push('Todos los campos son obligatorios')
     }
     // Retornar los errores si existen
@@ -16,11 +16,11 @@ export async function action({ request }) {
     }
 
     //aqui se hace la peticion al api
-    if(await addCategorias({nombre:datos.nombre}) == 201){
-        showAlert('Existo','Se creo el Registro correctamente','success')
+    if (await addCategorias({ nombre: datos.nombre }) == 201) {
+        showAlert('Existo', 'Se creo el Registro correctamente', 'success')
         return redirect("/axios/categorias")
-    }else{
-        return showAlert('Error','El Registro no se pudo crear ya existe','error')
+    } else {
+        return showAlert('Error', 'El Registro no se pudo crear ya existe', 'error')
     }
 
 }
@@ -38,14 +38,14 @@ const AxiosCategoriasAdd = () => {
             <hr />
             <h3>Crear Categorias</h3>
             <div>
-            {/* Mostrar los errores si existen */}
-            {errores?.length > 0 && (
-            <div className="error">
-                <ul>
-                    <li>{errores[0]}</li>
-                </ul>
-            </div>
-        )}
+                {/* Mostrar los errores si existen */}
+                {errores?.length > 0 && (
+                    <div className="error">
+                        <ul>
+                            <li>{errores[0]}</li>
+                        </ul>
+                    </div>
+                )}
             </div>
             <Form method="post">
                 <div className="form-group">
