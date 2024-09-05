@@ -1,5 +1,4 @@
 import { Link, Form, redirect, useActionData, useLoaderData } from "react-router-dom"
-import { addCategorias } from "../servicios/ApiRestAxios"
 import { showAlert } from "../helper/helpers"
 import { getCategoriasPorId,editCategoriasPorId } from "../servicios/ApiRestAxios"
 

@@ -7,27 +7,41 @@ const formatearFecha = (fecha) => {
         month: 'long',
         day: '2-digit'
     }
-    return fechaNueva.toLocaleDateString('es-ES',opcciones)
+    return fechaNueva.toLocaleDateString('es-ES', opcciones)
 }
 
 const formatearNumero = (numero) => {
     return new Intl.NumberFormat().format(numero)
 }
 
-const acortarTexto = (valor,desde, hasta) => {
+const acortarTexto = (valor, desde, hasta) => {
     return valor.substring(desde, hasta)
 }
 
-const showAlert = (titulo,mensaje,icono) => {
+const showAlert = (titulo, mensaje, icono) => {
     Swal.fire({
         title: titulo,
         html: mensaje,
         icon: icono
     })
 }
+
+const showAlertConfirm = (titulo,mensaje,icono) => {
+    return Swal.fire({
+        title: titulo,
+        text: mensaje,
+        icon: icono,
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Si!"
+    });
+}
+
 export {
     formatearFecha,
     formatearNumero,
     acortarTexto,
-    showAlert
+    showAlert,
+    showAlertConfirm
 }

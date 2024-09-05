@@ -59,9 +59,20 @@ const editCategoriasPorId = async (request,id) =>{
                 })
         return datos
 }
+const deliteCategoriasPorId = async (id) =>{
+    const datos = axios.delete(`${import.meta.env.VITE_API_URL}categorias/${id}`,{headers:cabeceros})
+                .then((response) => {
+                    return response.status
+                })
+                .catch((err) => {
+                    console.log("Fallo la comunicacion")
+                })
+        return datos
+}
 export {
     getCategorias,
     addCategorias,
     getCategoriasPorId,
-    editCategoriasPorId
+    editCategoriasPorId,
+    deliteCategoriasPorId
 }

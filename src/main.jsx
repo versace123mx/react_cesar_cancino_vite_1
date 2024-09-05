@@ -65,6 +65,7 @@ import AxiosComponent from './pages/AxiosComponent';
 import AxiosCategorias,{loader as listarCategorias} from './pages/AxiosCategorias';
 import AxiosCategoriasAdd, {action as addCategorias} from './pages/AxiosCategoriasAdd';
 import AxiosCategoriasEdit,{loader as editCategoriasLoader, action as editCategorias} from './pages/AxiosCategoriasEdit';
+import AxiosCategoriasDelit,{loader as eliminarCategoria} from './pages/AxiosCategoriasDelit';
 
 
 const router = createBrowserRouter
@@ -127,6 +128,7 @@ const router = createBrowserRouter
         { path:"/axios/categorias", loader:listarCategorias, element:<AxiosCategorias />},
         { path:"/axios/categorias/add", action:addCategorias, element:<AxiosCategoriasAdd />},
         { path:"/axios/categorias/editar/:id", loader:editCategoriasLoader,action:editCategorias, element:<AxiosCategoriasEdit />},
+        { path:"/axios/categorias/eliminar/:id",loader:eliminarCategoria, element:<AxiosCategoriasDelit />},
         { path:"*", element:<Error404 />},
       ]
     }
