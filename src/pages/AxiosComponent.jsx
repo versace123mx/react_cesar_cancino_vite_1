@@ -9,7 +9,7 @@ const AxiosComponent = () => {
                     <Link to="/axios/categorias">Categorias</Link>
                 </li>
                 <li>
-                    <Link to="/axios/productos">Productos</Link>
+                    <Link to="/axios/productos/1">Productos</Link>
                 </li>
             </ul>
         </>
