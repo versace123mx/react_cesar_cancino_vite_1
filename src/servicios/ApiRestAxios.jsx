@@ -162,6 +162,21 @@ const deliteProductoPorId = async (id) =>{
         return datos
 }
 
+const getProductosFotos = async (id) =>{
+    const datos = axios.get(`${import.meta.env.VITE_API_URL}productos-fotos/${id}`,{headers:cabeceros})
+                .then((response) => {
+                    if(response.status == 200){
+                        return response.data
+                    }else{
+                        console.log("Fallo la comunicacion en el then")
+                    }
+                })
+                .catch((err) => {
+                    console.log("Fallo la comunicacion")
+                })
+        return datos
+}
+
 export {
     getCategorias,
     addCategorias,
@@ -174,5 +189,6 @@ export {
     addProductos,
     getProductoPorId,
     editProductosXId,
-    deliteProductoPorId
+    deliteProductoPorId,
+    getProductosFotos
 }

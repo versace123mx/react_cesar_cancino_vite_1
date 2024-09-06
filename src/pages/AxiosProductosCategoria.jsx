@@ -6,13 +6,13 @@ import { acortarTexto, formatearNumero, showAlert, showAlertConfirm } from "../h
 //otra forma de utilizarlo es con useEffect que se ejecuta al igual al cargar el componente
 //otra forma seria que se ejecute cuando se de click en un boton
 export async function loader({ params }) {
-    const datos = await getProductosPorCategorias(params.slug,params.page)
+    const datos = await getProductosPorCategorias(params.slug, params.page)
     const categorias = await getCategoriasPorSlug(params.slug)
-    return [datos,categorias]
+    return [datos, categorias]
 }
 
 const AxiosProductosCategoria = () => {
-    const [datos,categorias] = useLoaderData()
+    const [datos, categorias] = useLoaderData()
     const { slug, page } = useParams();//Para traer el valor de la url checar el archivo main.jsx ath:"/axios/productos/categorias/:slug/:page"
 
     //Logica del paginado
@@ -54,7 +54,7 @@ const AxiosProductosCategoria = () => {
                     </svg>
                 </Link>
             </p>
-            
+
             {(Object.values(datos).length) ? (
                 <>
                     <table className="table table-striped table-bordered">
@@ -89,12 +89,12 @@ const AxiosProductosCategoria = () => {
                                     <td>{producto.categoria}</td>
                                     <td>{producto.categorias_id}</td>
                                     <td>
-                                        <a href="#">
+                                        <Link to={`/axios/productos/fotos/${producto.id}`}>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-image" viewBox="0 0 16 16">
                                                 <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
                                                 <path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z" />
                                             </svg>
-                                        </a>
+                                        </Link>
                                     </td>
                                     <td>
                                         <Link to={`/axios/productos/editar/${producto.id}`}>
