@@ -177,6 +177,19 @@ const getProductosFotos = async (id) =>{
         return datos
 }
 
+const addFotosPorProducto = async (imagen, productos_id) => {
+    let formData = new FormData();
+    formData.append('imagen', imagen);
+    formData.append('productos_id', productos_id);
+    let datos = axios.post(`${import.meta.env.VITE_API_URL}productos-fotos`, formData, {headers: cabeceros_upload})
+        .then((response) => {
+            return response.status;
+        }).catch((error) => {
+            console.log(error);
+        });
+    return datos;
+}
+
 export {
     getCategorias,
     addCategorias,
@@ -190,5 +203,6 @@ export {
     getProductoPorId,
     editProductosXId,
     deliteProductoPorId,
-    getProductosFotos
+    getProductosFotos,
+    addFotosPorProducto
 }

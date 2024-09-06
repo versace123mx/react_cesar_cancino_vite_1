@@ -1,6 +1,7 @@
 import { Link, Form, redirect, useActionData, useLoaderData } from "react-router-dom"
-import { getProductosFotos, getProductoPorId } from "../servicios/ApiRestAxios"
-
+import { getProductosFotos, getProductoPorId, addFotosPorProducto } from "../servicios/ApiRestAxios"
+import Validaciones from "../helper/Validaciones"
+import { showAlert } from "../helper/helpers"
 //Se realiza con el loader ya que se llama a getProductoPorId y getCategorias en cuanto carga el componente
 //otra forma de utilizarlo es con useEffect que se ejecuta al igual al cargar el componente
 //otra forma seria que se ejecute cuando se de click en un boton
@@ -11,29 +12,47 @@ export async function loader({ params }) {
 }
 export async function action({ request, params }) {
     //aqui se extraen los datos de formulario para su validacion
-    const formData = await request.formData()
-    const datos = Object.fromEntries(formData)
-    let errores = []
-    if (Object.values(datos).includes('')) {
-        errores.push('Todos los campos son obligatorios')
+    const formData = await request.formData();
+    const datos = Object.fromEntries(formData);
+    const errores = [];
+    let bandera = 0;
+    switch (formData.get('foto').type) {
+        case 'image/png':
+            bandera = 0;
+            break;
+        case 'image/jpg':
+            bandera = 0;
+            break;
+        case 'image/jpeg':
+            bandera = 0;
+            break;
+        default:
+            bandera = 1;
+            break;
     }
-    // Retornar los errores si existen
-    if (errores.length > 0) {
+    if (bandera == 1) {
+        errores.push('La foto debe tener un formato permitido: PNG | JPG');
+    }
+    // Retornar datos si hay errores
+    if (Object.keys(errores).length) {
+        //console.log(errores);
         return errores;
     }
-
-    //aqui se hace la peticion al api
-    if (await editProductosXId({ nombre: datos.nombre, descripcion: datos.descripcion, precio: datos.precio, stock: datos.stock, categorias_id: datos.categorias_id }, params.id) == 201) {
-        showAlert('Exito', 'Se edito el Registro correctamente', 'success')
-        return redirect("/axios/productos/1")
+    //console.log(formData.get('foto'))
+    //return null
+    
+    if (await addFotosPorProducto(formData.get('foto'), params.id) == 201) {
+        showAlert('Ok', 'La imagen se ha cargado correctamente', 'success')
+        return redirect(`/axios/productos/fotos/${params.id}`);
     } else {
-        return showAlert('Error', 'El Registro no se pudo modificar', 'error')
+        showAlert('Error', 'La imagen no se ha cargado', 'error')
+        return redirect(`/axios/productos/fotos/${params.id}`);
     }
+    
 }
 const AxiosProductosFoto = () => {
     const [productoFotos, datos] = useLoaderData()//aqui cargamos los datos del loader
-    console.log(productoFotos)
-    console.log(datos)
+    const errores = useActionData(); // Aquí obtienes los datos retornados desde la acción
     return (
         <>
             <nav aria-label="breadcrumb">
@@ -45,9 +64,22 @@ const AxiosProductosFoto = () => {
             </nav>
             <hr />
             <h3>Producto Fotos</h3>
+            {/* Mostrar los errores si existen se pasan los errores como props al componente Validaciones*/}
+            {errores?.length && <Validaciones errores={errores} />}
             <h3>Formulario</h3>
+            <div className="my-3">
+                <Form method="post" encType="multipart/form-data">
+                    <div>
+                        <label htmlFor="foto">Sube tu Foto</label>
+                        <input type="file" id="foto" name="foto" className="form-control" />
+                    </div>
+                    <div className="my-3">
+                        <button type="submit" className="btn btn-primary" >Enviar</button>
+                    </div>
+                </Form>
+            </div>
             <div>
-                <table className="table  table-bordered">
+                <table className="table table-bordered">
                     <thead className="table-light">
                         <tr>
                             <th scope="col">#</th>
