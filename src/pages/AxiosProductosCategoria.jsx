@@ -1,18 +1,18 @@
 import { Link, useLoaderData, useNavigate, useParams } from "react-router-dom"
-import { getProductos } from "../servicios/ApiRestAxios"
-import { acortarTexto, formatearNumero } from "../helper/helpers"
+import { getCategoriasPorSlug, getProductosPorCategorias } from "../servicios/ApiRestAxios"
+import { acortarTexto, formatearNumero, showAlert, showAlertConfirm } from "../helper/helpers"
 
 //Se realiza con el loader ya que se llama a getProductos en cuanto carga el componente
 //otra forma de utilizarlo es con useEffect que se ejecuta al igual al cargar el componente
 //otra forma seria que se ejecute cuando se de click en un boton
 export async function loader({ params }) {
-    const datos = await getProductos(params.page)
-    return datos
+    const datos = await getProductosPorCategorias(params.slug,params.page)
+    const categorias = await getCategoriasPorSlug(params.slug)
+    return [datos,categorias]
 }
 
-function AxiosProductos() {
-    const datos = useLoaderData()//aqui cargamos los datos del loader
-    //console.log(datos)
+const AxiosProductosCategoria = () => {
+    const [datos,categorias] = useLoaderData()
     const { page } = useParams();//Para traer el valor de la url
 
     //Logica del paginado
@@ -39,11 +39,12 @@ function AxiosProductos() {
             <nav aria-label="breadcrumb">
                 <ul className="breadcrumb">
                     <li className="breadcrumb-item"><Link to="/axios">Home - Axios</Link></li>
-                    <li className="breadcrumb-item">Productos - Axios</li>
+                    <li className="breadcrumb-item"><Link to="/axios/productos/1">Productos - Axios</Link></li>
+                    <li className="breadcrumb-item">Productos Categoria : {categorias && categorias.nombre}</li>
                 </ul>
             </nav>
             <hr />
-            <h3>Get Productos</h3>
+            <h3>Productos Categoria</h3>
             <p>
                 <Link className='btn btn-success' to="/axios/productos/add">
                     Crear
@@ -53,6 +54,7 @@ function AxiosProductos() {
                     </svg>
                 </Link>
             </p>
+            
             {(Object.values(datos).length) ? (
                 <>
                     <table className="table table-striped table-bordered">
@@ -171,4 +173,4 @@ function AxiosProductos() {
     )
 }
 
-export default AxiosProductos
+export default AxiosProductosCategoria

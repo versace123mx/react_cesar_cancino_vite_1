@@ -83,11 +83,43 @@ const getProductos = async (page) =>{
                 })
         return datos
 }
+
+const getCategoriasPorSlug = async (slug) =>{
+    const datos = axios.get(`${import.meta.env.VITE_API_URL}categorias-slug/${slug}`,{headers:cabeceros})
+                .then((response) => {
+                    if(response.status == 200){
+                        return response.data
+                    }else{
+                        console.log("Fallo la comunicacion en el then")
+                    }
+                })
+                .catch((err) => {
+                    console.log("Fallo la comunicacion")
+                })
+        return datos
+}
+
+const getProductosPorCategorias = async (slug,page) =>{
+    const datos = axios.get(`${import.meta.env.VITE_API_URL}productos-buscar/${slug}?page=${page}`,{headers:cabeceros})
+                .then((response) => {
+                    if(response.status == 200){
+                        return response.data
+                    }else{
+                        console.log("Fallo la comunicacion en el then")
+                    }
+                })
+                .catch((err) => {
+                    console.log("Fallo la comunicacion")
+                })
+        return datos
+}
 export {
     getCategorias,
     addCategorias,
     getCategoriasPorId,
     editCategoriasPorId,
     deliteCategoriasPorId,
-    getProductos
+    getProductos,
+    getCategoriasPorSlug,
+    getProductosPorCategorias
 }

@@ -67,6 +67,7 @@ import AxiosCategoriasAdd, {action as addCategorias} from './pages/AxiosCategori
 import AxiosCategoriasEdit,{loader as editCategoriasLoader, action as editCategorias} from './pages/AxiosCategoriasEdit';
 import AxiosCategoriasDelit,{loader as eliminarCategoria} from './pages/AxiosCategoriasDelit';
 import AxiosProductos,{loader as listarProductos} from './pages/AxiosProductos';
+import AxiosProductosCategoria,{loader as listarProductosCategorias} from './pages/AxiosProductosCategoria';
 
 
 const router = createBrowserRouter
@@ -131,6 +132,7 @@ const router = createBrowserRouter
         { path:"/axios/categorias/editar/:id", loader:editCategoriasLoader,action:editCategorias, element:<AxiosCategoriasEdit />},
         { path:"/axios/categorias/eliminar/:id",loader:eliminarCategoria, element:<AxiosCategoriasDelit />},
         { path:"/axios/productos/:page", loader:listarProductos, element:<AxiosProductos />},
+        { path:"/axios/productos/categorias/:slug/:page", loader:listarProductosCategorias, element:<AxiosProductosCategoria />},
         { path:"*", element:<Error404 />},
       ]
     }
