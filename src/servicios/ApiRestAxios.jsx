@@ -125,6 +125,32 @@ const addProductos = async (request) =>{
         return datos
 }
 
+const getProductoPorId = async (id) =>{
+    const datos = axios.get(`${import.meta.env.VITE_API_URL}productos/${id}`,{headers:cabeceros})
+                .then((response) => {
+                    if(response.status == 200){
+                        return response.data
+                    }else{
+                        console.log("Fallo la comunicacion en el then")
+                    }
+                })
+                .catch((err) => {
+                    console.log("Fallo la comunicacion")
+                })
+        return datos
+}
+
+const editProductosXId = async (request,id) =>{
+    const datos = axios.put(`${import.meta.env.VITE_API_URL}productos/${id}`,request,{headers:cabeceros})
+                .then((response) => {
+                    return response.status
+                })
+                .catch((err) => {
+                    console.log("Fallo la comunicacion")
+                })
+        return datos
+}
+
 export {
     getCategorias,
     addCategorias,
@@ -134,5 +160,7 @@ export {
     getProductos,
     getCategoriasPorSlug,
     getProductosPorCategorias,
-    addProductos
+    addProductos,
+    getProductoPorId,
+    editProductosXId
 }

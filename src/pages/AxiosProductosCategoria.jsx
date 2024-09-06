@@ -86,11 +86,7 @@ const AxiosProductosCategoria = () => {
                                     <td>{producto.fecha}</td>
                                     <td>${formatearNumero(producto.precio)}</td>
                                     <td>{producto.stock}</td>
-                                    <td>
-                                        <Link to={`/axios/productos/categorias/${producto.categoria_slug}/1`}>
-                                            {producto.categoria}
-                                        </Link>
-                                    </td>
+                                    <td>{producto.categoria}</td>
                                     <td>{producto.categorias_id}</td>
                                     <td>
                                         <a href="#">
