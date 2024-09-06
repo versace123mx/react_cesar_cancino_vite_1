@@ -151,6 +151,17 @@ const editProductosXId = async (request,id) =>{
         return datos
 }
 
+const deliteProductoPorId = async (id) =>{
+    const datos = axios.delete(`${import.meta.env.VITE_API_URL}productos/${id}`,{headers:cabeceros})
+                .then((response) => {
+                    return response.status
+                })
+                .catch((err) => {
+                    console.log("Fallo la comunicacion")
+                })
+        return datos
+}
+
 export {
     getCategorias,
     addCategorias,
@@ -162,5 +173,6 @@ export {
     getProductosPorCategorias,
     addProductos,
     getProductoPorId,
-    editProductosXId
+    editProductosXId,
+    deliteProductoPorId
 }
