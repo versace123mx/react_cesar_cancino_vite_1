@@ -190,6 +190,17 @@ const addFotosPorProducto = async (imagen, productos_id) => {
     return datos;
 }
 
+const deleteFotos = (id) => {
+    let datos = axios.delete(`${import.meta.env.VITE_API_URL}productos-fotos/${id}`, {
+            headers: cabeceros
+        })
+        .then((response) => {
+            return response.status;
+        }).catch((error) => {
+            console.log(error);
+        });
+    return datos;
+}
 export {
     getCategorias,
     addCategorias,
@@ -204,5 +215,6 @@ export {
     editProductosXId,
     deliteProductoPorId,
     getProductosFotos,
-    addFotosPorProducto
+    addFotosPorProducto,
+    deleteFotos
 }

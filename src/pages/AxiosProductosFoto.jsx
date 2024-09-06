@@ -1,7 +1,7 @@
-import { Link, Form, redirect, useActionData, useLoaderData } from "react-router-dom"
-import { getProductosFotos, getProductoPorId, addFotosPorProducto } from "../servicios/ApiRestAxios"
+import { Link, Form, redirect, useActionData, useLoaderData, useNavigate, useParams } from "react-router-dom"
+import { getProductosFotos, getProductoPorId, addFotosPorProducto, deleteFotos } from "../servicios/ApiRestAxios"
 import Validaciones from "../helper/Validaciones"
-import { showAlert } from "../helper/helpers"
+import { showAlert, showAlertConfirm } from "../helper/helpers"
 //Se realiza con el loader ya que se llama a getProductoPorId y getCategorias en cuanto carga el componente
 //otra forma de utilizarlo es con useEffect que se ejecuta al igual al cargar el componente
 //otra forma seria que se ejecute cuando se de click en un boton
@@ -50,9 +50,27 @@ export async function action({ request, params }) {
     }
     
 }
+
 const AxiosProductosFoto = () => {
     const [productoFotos, datos] = useLoaderData()//aqui cargamos los datos del loader
     const errores = useActionData(); // Aquí obtienes los datos retornados desde la acción
+    const navigate = useNavigate();
+    const valorUrl = useParams().id;//Para traer el valor de la url
+    //console.log(valorUrl)
+
+    const handleEliminar = async (id) => {
+        const result = await showAlertConfirm('Eliminar Registro', '', 'warning')
+        if (result.isConfirmed) {
+            if (await deleteFotos(id) === 200) {
+                showAlert('Ok','Se eliminó el registro exitosamente','success')
+                console.log('1')
+                return navigate(`/axios/productos/fotos/${valorUrl}`);
+            } else {
+                return showAlert('Ops','No es posible eliminar el registro en este momento','error')
+            }
+        }
+    };
+
     return (
         <>
             <nav aria-label="breadcrumb">
@@ -94,7 +112,7 @@ const AxiosProductosFoto = () => {
                                 <th scope="row">{foto.id}</th>
                                 <td><img src={`${foto.foto}`} alt="" width='70px' /></td>
                                 <td>
-                                    <Link to={`/axios/productos/eliminar/${foto.id}`}>
+                                    <Link to="#" onClick={() => handleEliminar(foto.id)}>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-trash" viewBox="0 0 16 16">
                                             <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
                                             <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
