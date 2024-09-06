@@ -113,6 +113,18 @@ const getProductosPorCategorias = async (slug,page) =>{
                 })
         return datos
 }
+
+const addProductos = async (request) =>{
+    const datos = axios.post(`${import.meta.env.VITE_API_URL}productos`,request,{headers:cabeceros})
+                .then((response) => {
+                    return response.status
+                })
+                .catch((err) => {
+                    console.log("Fallo la comunicacion")
+                })
+        return datos
+}
+
 export {
     getCategorias,
     addCategorias,
@@ -121,5 +133,6 @@ export {
     deliteCategoriasPorId,
     getProductos,
     getCategoriasPorSlug,
-    getProductosPorCategorias
+    getProductosPorCategorias,
+    addProductos
 }

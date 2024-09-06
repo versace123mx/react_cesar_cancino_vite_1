@@ -13,7 +13,7 @@ export async function loader({ params }) {
 
 const AxiosProductosCategoria = () => {
     const [datos,categorias] = useLoaderData()
-    const { page } = useParams();//Para traer el valor de la url
+    const { slug, page } = useParams();//Para traer el valor de la url checar el archivo main.jsx ath:"/axios/productos/categorias/:slug/:page"
 
     //Logica del paginado
     let anterior;
@@ -141,7 +141,7 @@ const AxiosProductosCategoria = () => {
                             {[...paginas].map((x, i) => (
                                 <li className="page-item" key={i}>
                                     {i >= 1 && (
-                                        <Link className={`page-link ${(page == i) ? 'active' : ''}`} to={`/axios/productos/${i}`}>
+                                        <Link className={`page-link ${(page == i) ? 'active' : ''}`} to={`/axios/productos/categorias/${slug}/${i}`}>
                                             {i}
                                         </Link>
                                     )}
