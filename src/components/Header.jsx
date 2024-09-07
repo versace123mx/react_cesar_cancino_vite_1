@@ -34,6 +34,10 @@ function Header() {
                         <Link className="nav-item nav-link link-body-emphasis" to="/redux">Redux</Link>
                         <Link className="nav-item nav-link link-body-emphasis" to="/axios">Axios</Link>
                         <Link className="nav-item nav-link link-body-emphasis" to="/fetch">Featch</Link>
+                        <Link className="nav-item nav-link link-body-emphasis" to="/acceso/login">Login</Link>
+                        <Link className="nav-item nav-link link-body-emphasis" to="/acceso/registro">Registro</Link>
+                        <Link className="nav-item nav-link link-body-emphasis" to="/acceso/protegido">Protegido</Link>
+                        <Link className="nav-item nav-link link-body-emphasis" to="/acceso/protegido2">Protegido2</Link>
                     </nav>
                 </div>
             </div>

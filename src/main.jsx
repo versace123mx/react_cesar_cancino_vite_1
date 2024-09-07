@@ -76,6 +76,10 @@ import FetchComponent from './pages/FetchComponent'
 import FetchCategorias, {loader as listarCategoriasFetch} from './pages/FetchCategorias';
 import FetchProductos, {loader as listarProductosFetch} from './pages/FetchProductos';
 import FetchProductosFotos, {loader as listarProductosFotosFetch, action as addProductosFotosFetch} from './pages/FetchProductosFotos';
+import AccesoRegistro, {action as registroAction} from './pages/AccesoRegistro';
+import AccesoLogin from './pages/AccesoLogin';
+import AccesoProtegido from './pages/AccesoProtegido';
+import AccesoProtegido2 from './pages/AccesoProtegido2';
 
 const router = createBrowserRouter
 (
@@ -148,6 +152,12 @@ const router = createBrowserRouter
         { path: '/fetch/categorias', element: <FetchCategorias />, loader: listarCategoriasFetch},
         { path: '/fetch/productos/:page',element: <FetchProductos />,loader: listarProductosFetch},
         { path: '/fetch/productos/fotos/:id',element: <FetchProductosFotos />,loader: listarProductosFotosFetch, action: addProductosFotosFetch},
+
+        { path: '/acceso/registro',element: <AccesoRegistro />,action:registroAction},
+        { path: '/acceso/login',element: <AccesoLogin />},
+        { path: '/acceso/protegido',element: <AccesoProtegido />},
+        { path: '/acceso/protegido2',element: <AccesoProtegido2 />},
+
         { path:"*", element:<Error404 />},
       ]
     }
