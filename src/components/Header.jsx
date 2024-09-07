@@ -33,6 +33,7 @@ function Header() {
                         <Link className="nav-item nav-link link-body-emphasis" to="/conetext">Context</Link>
                         <Link className="nav-item nav-link link-body-emphasis" to="/redux">Redux</Link>
                         <Link className="nav-item nav-link link-body-emphasis" to="/axios">Axios</Link>
+                        <Link className="nav-item nav-link link-body-emphasis" to="/fetch">Featch</Link>
                     </nav>
                 </div>
             </div>

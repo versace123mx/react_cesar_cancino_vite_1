@@ -72,7 +72,10 @@ import AxiosProductosAdd, {loader as listarCategoriasAddProductos, action as add
 import AxiosProductosEdit, {loader as editarProductosCategorias, action as editProductos} from './pages/AxiosProductosEdit';
 import AxiosProductosDelit, {loader as eliminarProductosCategorias} from './pages/AxiosProductosDelit';
 import AxiosProductosFoto, { loader as listarProductosFoto, action as addProductosFoto } from './pages/AxiosProductosFoto';
-
+import FetchComponent from './pages/FetchComponent'
+import FetchCategorias, {loader as listarCategoriasFetch} from './pages/FetchCategorias';
+import FetchProductos, {loader as listarProductosFetch} from './pages/FetchProductos';
+import FetchProductosFotos, {loader as listarProductosFotosFetch, action as addProductosFotosFetch} from './pages/FetchProductosFotos';
 
 const router = createBrowserRouter
 (
@@ -141,6 +144,10 @@ const router = createBrowserRouter
         { path:"/axios/productos/editar/:id", loader:editarProductosCategorias,action:editProductos, element:<AxiosProductosEdit />},
         { path:"/axios/productos/eliminar/:id/:pagina?", loader:eliminarProductosCategorias, element:<AxiosProductosDelit />},
         { path:"/axios/productos/fotos/:id", loader:listarProductosFoto, action:addProductosFoto, element:<AxiosProductosFoto />},
+        { path: '/fetch',element: <FetchComponent />},
+        { path: '/fetch/categorias', element: <FetchCategorias />, loader: listarCategoriasFetch},
+        { path: '/fetch/productos/:page',element: <FetchProductos />,loader: listarProductosFetch},
+        { path: '/fetch/productos/fotos/:id',element: <FetchProductosFotos />,loader: listarProductosFotosFetch, action: addProductosFotosFetch},
         { path:"*", element:<Error404 />},
       ]
     }
