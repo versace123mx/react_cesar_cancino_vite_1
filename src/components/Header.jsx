@@ -3,7 +3,7 @@ import { useContext } from "react"
 import AuthContext from "../context/AuthProvider"
 
 function Header() {
-    const {auth} = useContext(AuthContext)//el auth viene de ../context/AuthProvider ya que ahi lo dispersamos para todo el arbol
+    const { auth, handleCerrarSession } = useContext(AuthContext)//el auth viene de ../context/AuthProvider ya que ahi lo dispersamos para todo el arbol
     return (
         <div className="container">
                 <header className="border-bottom lh-1 py-3">
@@ -42,6 +42,7 @@ function Header() {
                             <>
                             <Link className="nav-item nav-link link-body-emphasis" to="/acceso/protegido">Protegido</Link>
                             <Link className="nav-item nav-link link-body-emphasis" to="/acceso/protegido2">Protegido2</Link>
+                            <Link className="nav-item nav-link link-body-emphasis" to="#" onClick={handleCerrarSession}>Salir</Link>
                             </>
                         ):(
                             <>
