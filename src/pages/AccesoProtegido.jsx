@@ -1,11 +1,14 @@
-import React from 'react'
+import { useContext } from "react"
+import AuthContext from "../context/AuthProvider"
 
 const AccesoProtegido = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+    const { handleEstalogueado } = useContext(AuthContext)
+    handleEstalogueado()
+    return (
+        <>
+            <h1>Protegido</h1>
+        </>
+    )
 }
 
 export default AccesoProtegido
