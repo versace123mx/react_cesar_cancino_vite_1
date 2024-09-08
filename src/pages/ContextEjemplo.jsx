@@ -2,7 +2,11 @@ import { useContext } from "react"
 import EjemploContext from "../context/EjemploProvider"
 
 function ContextEjemplo() {
-    const {variableContexto,saludar,stateContext,setStateContext} = useContext(EjemploContext)
+    /*
+    se comentaron las siguientes lineas por que estamos utilizando otro context para el apartado de login
+    si se requiere ver este ejemplo hay que descomentar esta lineas y descomentar el context EjemploProvider que esta en el Frontend.jsx y dejar solo 1 context en funcionamiento
+    */
+    //const {variableContexto,saludar,stateContext,setStateContext} = useContext(EjemploContext)
     //setStateContext('nuevo mensaje')//Modificando el valor del state Context inicial
     const handleChangeMessageContex = () => {
         setStateContext('Nuevo valor de statext Context')
