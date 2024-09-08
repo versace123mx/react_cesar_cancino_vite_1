@@ -20,9 +20,22 @@ const AuthProvider = ({children})=> {
             //return redirect("/acceso/login")
         }
     }
+
+    //Traemos todo lo del context de ejemplo para hacer que no nos marque erro ya que ahora solo estamos utilziando este context
+    const variableContexto = "Hola Gustavo"
+    const saludar = (nombre) =>{
+        return nombre
+    }
+    const [stateContext,setStateContext] = useState("Contenido Inicial al state Context")
+    //hasta aqui es del el contenido del context anterior llamado EjemploProvider
+
     return (
         <AuthContext.Provider value={{
-            auth,handleIniciarSession,handleEstalogueado
+            auth,handleIniciarSession,handleEstalogueado,
+            variableContexto,
+            saludar,
+            stateContext,
+            setStateContext
         }}>
             {children}
         </AuthContext.Provider>

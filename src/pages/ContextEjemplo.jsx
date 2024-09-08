@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import EjemploContext from "../context/EjemploProvider"
+import AuthContext from "../context/AuthProvider"
 
 function ContextEjemplo() {
     /*
@@ -8,6 +9,10 @@ function ContextEjemplo() {
     */
     //const {variableContexto,saludar,stateContext,setStateContext} = useContext(EjemploContext)
     //setStateContext('nuevo mensaje')//Modificando el valor del state Context inicial
+
+    //llamamos al nuevo contexto para que funcione todo
+    const {variableContexto,saludar,stateContext,setStateContext} = useContext(AuthContext)
+    setStateContext('nuevo mensaje')//Modificando el valor del state Context inicial
     const handleChangeMessageContex = () => {
         setStateContext('Nuevo valor de statext Context')
     }
