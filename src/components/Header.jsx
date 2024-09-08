@@ -1,5 +1,9 @@
 import { Link, NavLink } from "react-router-dom"
+import { useContext } from "react"
+import AuthContext from "../context/AuthProvider"
+
 function Header() {
+    const {auth} = useContext(AuthContext)//el auth viene de ../context/AuthProvider ya que ahi lo dispersamos para todo el arbol
     return (
         <div className="container">
                 <header className="border-bottom lh-1 py-3">
@@ -34,10 +38,18 @@ function Header() {
                         <Link className="nav-item nav-link link-body-emphasis" to="/redux">Redux</Link>
                         <Link className="nav-item nav-link link-body-emphasis" to="/axios">Axios</Link>
                         <Link className="nav-item nav-link link-body-emphasis" to="/fetch">Featch</Link>
-                        <Link className="nav-item nav-link link-body-emphasis" to="/acceso/login">Login</Link>
-                        <Link className="nav-item nav-link link-body-emphasis" to="/acceso/registro">Registro</Link>
-                        <Link className="nav-item nav-link link-body-emphasis" to="/acceso/protegido">Protegido</Link>
-                        <Link className="nav-item nav-link link-body-emphasis" to="/acceso/protegido2">Protegido2</Link>
+                        {auth?(
+                            <>
+                            <Link className="nav-item nav-link link-body-emphasis" to="/acceso/protegido">Protegido</Link>
+                            <Link className="nav-item nav-link link-body-emphasis" to="/acceso/protegido2">Protegido2</Link>
+                            </>
+                        ):(
+                            <>
+                            <Link className="nav-item nav-link link-body-emphasis" to="/acceso/login">Login</Link>
+                            <Link className="nav-item nav-link link-body-emphasis" to="/acceso/registro">Registro</Link>
+                            </>
+                        )}
+                        
                     </nav>
                 </div>
             </div>
