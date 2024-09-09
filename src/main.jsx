@@ -80,6 +80,10 @@ import AccesoRegistro, {action as registroAction} from './pages/AccesoRegistro';
 import AccesoLogin from './pages/AccesoLogin';
 import AccesoProtegido from './pages/AccesoProtegido';
 import AccesoProtegido2 from './pages/AccesoProtegido2';
+import Pasarelas from './pages/Pasarelas';
+import PasarelasPaypal, { loader as paypalLoader } from './pages/PasarelasPaypal';
+import PasarelasPaypalRespuesta, { loader as paypalRespuestaLoader } from './pages/PasarelasPaypalRespuesta';
+import PasarelasPaypalCancelado, { loader as paypalCanceladoLoader } from './pages/PasarelasPaypalCancelado';
 
 const router = createBrowserRouter
 (
@@ -157,6 +161,11 @@ const router = createBrowserRouter
         { path: '/acceso/login',element: <AccesoLogin />},
         { path: '/acceso/protegido',element: <AccesoProtegido />},
         { path: '/acceso/protegido2',element: <AccesoProtegido2 />},
+
+        { path: '/pasarelas',element: <Pasarelas />},
+        { path: '/pasarelas/paypal',element: <PasarelasPaypal />, loader:paypalLoader },
+        { path: '/pasarelas/paypal/respuesta',element: <PasarelasPaypalRespuesta />, loader:paypalRespuestaLoader },
+        { path: '/pasarelas/paypal/cancelado',element: <PasarelasPaypalCancelado />, loader:paypalCanceladoLoader },
 
         { path:"*", element:<Error404 />},
       ]

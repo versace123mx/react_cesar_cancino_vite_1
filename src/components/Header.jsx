@@ -50,7 +50,7 @@ function Header() {
                             <Link className="nav-item nav-link link-body-emphasis" to="/acceso/registro">Registro</Link>
                             </>
                         )}
-                        
+                        <Link className="nav-item nav-link link-body-emphasis" to="/pasarelas">Pasarelas</Link>
                     </nav>
                 </div>
             </div>
